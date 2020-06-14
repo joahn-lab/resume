@@ -1,0 +1,72 @@
+---
+name: 조병준
+surname: 
+position: "데이터 저널리스트를 꿈꾸는 대학생, 시민 데이터 과학자"
+address: "부산시 동래구 명륜동 문화로 33"
+phone: +82 010-6567-5655
+www: joahn-lab.netlify.app/
+email: "chchchch0000@gmail.com"
+github: joahn-lab
+instagram: babyblu_deepdown
+date: "`r format(Sys.time(), '%B %Y')`"
+header-includes: 
+  - \usepackage{kotex}
+output: 
+  vitae::hyndman:
+    pdf_document:
+      latex_engine: xelatex
+mainfont: NanumGothic
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+options(tinytex.verbose = TRUE)
+```
+
+# 소개
+
+ * 저는 데이터 저널리스트 및 PD를 꿈꾸는 대학생입니다.
+ * 저는 사진을 찍고, 영상을 만들고 글을 쓰기를 좋아합니다. 주디스 버틀러와 낸시 프레이저를 비롯한 급진 민주주의 관련 서적을 즐겨 읽습니다.
+ * 현재 부산에 살고 있습니다.
+
+# 학력
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "언론홍보영상학부", "2015.3~", "연세대학교", "서울시 서대문구",
+  "인문계열", "2012.3~2015.2", "용인고등학교", "부산시 동래구",
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+# 경력
+
+```{r}
+library(tibble)
+tribble(
+  ~ Status, ~ Year, ~ Team,
+  "제작PD 인턴", "2019.8~2020.2", "JTBC 디지털뉴스국 H-TF",
+  "디지털 광고/홍보 담당", "2018.6~2019.8", "연세대학교 산학협력단",
+  "홍보기획팀원", "2018.08~2019.02", "프리메드(서울역 무료진료 NGO)",
+  "팀원", "2015.03~2016.06", "연세대학교 영화 동아리"
+) %>% 
+  detailed_entries(Status, Year, Team)
+```
+
+# 프로젝트
+
+```{r}
+tribble(
+  ~ Name, ~ Year, ~ Content, ~ Index,
+  "온도(On the road)", "2020.3~", "공정여행 홍보 영상 제작", "연세대학교 워크스테이션 비교과 프로젝트",
+  "당신만의 방", "2019.3~2020.2", "서울시 동자동 쪽방촌 연계 전시 및 봉사활동", "연세대학교 워크스테이션 비교과 프로젝트",
+  "나의 엘리바즈", "2019.02~2019.12", "학생 단편영화 제작", "제작/연출",
+  "저 할아버지의 집은 어디인가", "2018.09~2018.12", "서울시 동자동 쪽방촌 문제 인터뷰 단편다큐 제작", "2019 연세 Social Entrepreneurship award 수상",
+  "돈의낙원익선, 8인의 퀴어한 대담", "2018.09~2019.12", "서울시 종로구 익선동 젠트리피케이션 관련 영상 제작", "2018 한국영상인류학회 주관 공모전 수상"
+) %>% 
+  detailed_entries(Name, Year, Content, Index)
+```
+
